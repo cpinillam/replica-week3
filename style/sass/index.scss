@@ -123,7 +123,7 @@ header{
         .nav-list {
             position: absolute;
             right:10%;
-            width: 50%;
+            width: 40%;
             ul {
                 list-style-type: none;
                 display: flex;
@@ -185,13 +185,12 @@ main{
         justify-content: space-around;
         align-items: center;
         margin:auto;
-        height: 60vh;
+        //height: 60vh;
         margin-bottom:10vh;
         width:75%;
             .right{
-                
                 width: 30%;
-                height: 80%;
+                height: 50vh;
                 overflow: hidden;
                 
                 position: relative;
@@ -204,7 +203,7 @@ main{
             }
             .left {
                 width: 30%;
-                height: 80%;
+                height: 50vh;
 
                 h2 {
                     color: #b0a38e;
@@ -222,7 +221,6 @@ main{
 
             .center {
                 width: 20%;
-                height: 80%;
                 display: flex;
                 flex-direction: column;
                
@@ -235,12 +233,12 @@ main{
 
                
                .delivery{
-                   width: 50%;
+                   width: 25%;
                    height: 35%;
                    
                    
                     img{
-                        width: 50%;
+                        width: 100%;
                         height:40%;                                                 
                         margin-top: 1.5vh;
                         
@@ -253,10 +251,10 @@ main{
                    }
                }
                .support{
-                width: 50%;
+                width: 25%;
                 height: 35%;
                  img{
-                    width: 40%;
+                    width: 100%;
                     margin-top: 1.5vh;
         
                 }
@@ -267,10 +265,10 @@ main{
                 }
             }
             .montage{
-                width: 50%;
+                width: 25%;
                 height: 35%;
                  img{
-                    width: 40%;
+                    width: 100%;
                     margin-top: 1.5vh;
                 }
                 p{
@@ -294,55 +292,25 @@ main{
         }
         .categoriaCenter{
             display:flex;
-            height: 80vh;
             width: 100%;
             overflow:hidden;
-            #bathroom{
-                position: relative;
-                cursor: pointer;
-                height: 100%;
-                width: 25%;
-                background-image: url("../../views/img/images/bathroom.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position-y: 100%;
-                background-position-x: 80%;
-                transform: scale(1);
-                transition: 0.3s ease-in-out; 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                h2{ 
-                    font-size:2rem;
-                    color:white;
-                    z-index: 2;
-                }
-                #dark{
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    background-color: black;
-                    opacity: .2;
-                }
-            }
-            #bathroom:hover{
-                h2{
-                    display:none;
-                }
-                transform: scale(1.3);
-            }
+
             
-            #kitchen{
+            .Slider{
                 position: relative;
                 cursor: pointer;
-                height: 100%;
+                height: 80vh;
                 width: 25%;
-                background-image: url("../../views/img/images/kitchen.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position-y: 100%;
-                background-position-x: 50%;
-                transform: scale(1);
+                border: 1px solid green;
+                overflow: hidden;
+                img{
+                    height: 100%;
+                    object-position: 50% 50%;
+                    position: absolute;
+                    transform: scale(1);
+                    transition: all 0.2s ease-out;
+                }
+
                 transition: 0.3s ease-in-out; 
                 display: flex;
                 justify-content: center;
@@ -351,84 +319,42 @@ main{
                     font-size:2rem;
                     color:white;
                     z-index: 2;
+                    transition: all 0.2s ease-out;
                 }
                 .dark{
                     position: absolute;
                     height: 100%;
                     width: 100%;
                     background-color: black;
-                    opacity: .2;
+                    opacity: 0.4;
+                    transition: all 1s ease-out;
                 }
 
             }
-            #kitchen:hover{
-                transform: scale(1.3);
+            .Slider:hover{
+                overflow: hidden;
+                
+                    h2{
+                        opacity: 0;
+                        transition: all .7s;
+                    }
+                    .dark{
+                        opacity: 0;
+                        transition: all .7s;
+                    }
+                    
+                
+               img {
+                   transform: scale(1.3);
+                    }
+                .dark:hover{
+                    opacity: 0;
+                }
             }
-            #bedRoom{
-                position: relative;
-                cursor: pointer;
-                height: 100%;
-                width: 25%;
-                background-image: url("../../views/img/images/bedroom.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position-y: 100%;
-                background-position-x: 50%;
-                transform: scale(1);
-                transition: 0.3s ease-in-out; 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                h2{
-                    font-size:2rem;
-                    color:white;
-                    z-index: 2;
-                }
-                .dark{
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    background-color:black;
-                    opacity: .2;
-                }
 
-            }
-            #bedRoom:hover{
-                transform: scale(1.3);
-            }
-            #livingRoom{
-                position: relative;
-                cursor: pointer;
-                height: 100%;
-                width: 25%;
-                background-image: url("../../views/img/images/livingroom.jpg");
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position-y: 100%;
-                background-position-x: 40%;
-                transform: scale(1);
-                transition: 0.3s ease-in-out; 
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                h2{
-                    font-size:2rem;
-                    text-align: center;
-                    color:white;
-                    z-index: 2;
-                }
-                .darkness{
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    background-color: black;
-                    opacity: .2;
-                }
 
-            }
-            #livingRoom:hover{
-                transform: scale(1.3);
-            }
+            
+           
             
 
         }
@@ -445,7 +371,7 @@ footer{
     background-color: #F3F3F3;
     p{
         letter-spacing: 1.6;
-        color:black;
+        color:#b0a38e;
     }
 }
 @media(max-width:800px){
@@ -462,6 +388,11 @@ footer{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
+                li{
+                    a{
+                        color:#fff;
+                    }
+                }
                 }
             }
             .switch{
@@ -472,19 +403,90 @@ footer{
                 top:20vh;
                
             }
+            .logo{
+                height: 6rem;
+                width: 6.5rem;
+            }
+        
+        }
+        h1{
+            font-size: 3rem;
+            text-align: center;
+        }
+
+    }
+    main{
+        .containerAbout{
+            display: flex;
+            flex-direction: column;
+            .left{
+                width: 100%;
+                h2{
+                    text-align: center;
+                }
+                p{
+                    text-align: center;
+                }
+            }
+            .center{
+                width: 100%;
+                margin-top: -2vh;
+                margin-bottom: 5vh;
+                .category-Name{
+                    text-align: center;
+                }
+                h2{
+                    text-align: center;
+                }
+                .delivery{
+                    margin-left: 37.5%;
+                }
+                .support{
+                    margin-left: 37.5%;
+                }
+                .montage{
+                    margin-left: 37.5%;
+                }
+            }
+            .right{
+                display: flex;
+                justify-content: center;
+                border:1px solid red;
+                width: 100%;
+            }
+        }
+        .containerCategories{
+            .categoriaCenter{
+                display:flex;
+                flex-direction: column;
+                border:1px solid red;
+                .Slider {
+                    height: 30vh;
+                    width: 100%;
+                    .move{
+                        position: absolute;
+                        top: -20%;
+                    }
+                    img{
+                        width: 100%;
+                        height: auto;
+                        
+                        
+
+                       
+                       
+                        
+                    }
+
+                }
+            }
         }
     }
-  
-  
- 
-  
-/* .nav-icon span:nth-child(3) {
-    bottom:0;
-  } */
-
- 
 
 }
+
+ 
+
 
 
 
